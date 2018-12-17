@@ -40,16 +40,33 @@ public class Component {
 		return this.name;
 	}
 	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 	public String getDescription() {
 		return this.description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	public String getLink() {
 		return this.link;
 	}
 	
+	public void setLink(String link) {
+		this.link = link;
+	}
+	
 	public ComponentStatus getStatus() {
 		return this.status;
+	}
+	
+	public void setStatus(ComponentStatus status) {
+		this.status = status;
+		this.status_name = status.name();
 	}
 	
 	public int getOrder() {
@@ -62,6 +79,10 @@ public class Component {
 	
 	public Timestamp getUpdatedAt() {
 		return this.updated_at;
+	}
+	
+	public void setUpdatedAt(String timestamp) {
+		this.updated_at = Timestamp.valueOf(timestamp);
 	}
 	
 	public Timestamp getCreatedAt() {
